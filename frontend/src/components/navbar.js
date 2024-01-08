@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import marylandImage from './Maryland_logo.png'
+import marylandImage from '../images/Maryland_logo.png'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 
@@ -25,9 +25,9 @@ const theme = createTheme({
     }
 });
 const drawerWidth = 240;
-const navItems = ['Roster', 'Schedule', 'Recruiting', 'FAQ', 'Contact', 'Donate'];
+const navItems = ['Roster', 'Schedule', 'Recruiting', 'Contact', 'FAQ', 'Donate'];
 
-function DrawerAppBar(props) {
+function NavBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -90,7 +90,11 @@ function DrawerAppBar(props) {
             </Typography>
             <Box sx={{display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                <Button key={item} sx={{ fontWeight: 'bold', textTransform: 'none',color: '#fff' }}>
+                <Button key={item} sx={{ 
+                        fontWeight: 'bold', 
+                        textTransform: 'none',
+                        color: '#fff' }}>
+
                     {item}
                 </Button>
                 ))}
@@ -156,7 +160,7 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
+NavBar.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -164,4 +168,4 @@ DrawerAppBar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default NavBar;

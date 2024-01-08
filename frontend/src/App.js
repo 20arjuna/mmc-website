@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import ResponsiveAppBar from './navbar';
-import DrawerAppBar from './michigan_navbar';
+import NavBar from './components/navbar';
 //import navbar from './components/navbar';
 function App() {
   return (
     
     <div>
-      {/* <ResponsiveAppBar/> */}
-      <DrawerAppBar/>
+      <NavBar/>
     </div>
    
     // <div className="App">
