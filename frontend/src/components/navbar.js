@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import marylandImage from '../images/Maryland_logo.png'
+import menscrew from '../images/menscrew.png'
 import {Link} from 'react-router-dom';
 
 const theme = createTheme({
@@ -36,9 +37,14 @@ function NavBar(props) {
 
   const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2}}>
+            {/* <Typography variant="h6" sx={{ my: 2}}>
             Mui
-            </Typography>
+            </Typography> */}
+            <img
+                src={marylandImage}
+                alt="Adb Logo"
+                style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, marginTop: 15, height: '48px' }}
+            />
             <Divider />
             <List>
             {navItems.map((item) => (
@@ -46,7 +52,7 @@ function NavBar(props) {
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         {/* <ListItemText primary={item} /> */}
                         <Link 
-                            style={{ textDecoration: 'none', color: 'white' }}
+                            style={{ textDecoration: 'none', color: 'black' }}
                             to={`/${item}`}>
                                 {item}
                         </Link>
@@ -75,7 +81,7 @@ function NavBar(props) {
                 <MenuIcon />
             </IconButton>
             <img
-                src={marylandImage}
+                src={menscrew}
                 alt="Adb Logo"
                 style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, height: '48px' }}
             />
@@ -90,7 +96,7 @@ function NavBar(props) {
                     fontWeight: 'bold',
                 }}
             >
-                Men's Crew
+                {/* Men's Crew */}
             </Typography>
             <Box sx={{display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
