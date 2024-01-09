@@ -9,6 +9,8 @@ import Recruiting from './components/recruiting';
 import Schedule from './components/schedule';
 import Faq from './components/faq';
 import Roster from './components/roster';
+import React, { Component } from 'react';
+
 
 function App() {
   return (
