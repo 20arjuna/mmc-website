@@ -73,7 +73,7 @@ const Roster = () => {
 
   return (
     <div style={{ background: '#f0f0f0', minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
-      <Container style={{ background: 'white', width: '80%', padding: '20px',  borderRadius: '0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginTop: '0px' }}>
+      <Container style={{ background: 'white', width: '80%', marginTop: '90px', marginBottom: '30px', borderRadius: '0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
         <Typography variant="h4" style={{ marginBottom: '20px' }}>2023-24 Roster</Typography>
         {rosterData.map((rower) => (
           <Card key={rower.id} style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
