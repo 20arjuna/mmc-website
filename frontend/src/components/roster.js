@@ -60,13 +60,20 @@ import Container from '@mui/material/Container';
 
 const Roster = () => {
   const rosterData = [
-    { id: 1, name: 'John Doe', year: 'Senior', major: 'Computer Science', photo: john },
+    { id: 1, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 2, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 3, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 4, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 5, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 6, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+    { id: 7, name: 'Kannan Alford', year: 'Senior', major: 'Computer Science', hometown: 'Baltimore, Md.', highschool: 'Poolesville', photo: john },
+
     // Add more rower data as needed
   ];
 
   return (
-    <div style={{ background: '#f0f0f0', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Container style={{ background: 'white', width: '90%', padding: '20px', borderRadius: '0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginTop: '40px' }}>
+    <div style={{ background: '#f0f0f0', minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
+      <Container style={{ background: 'white', width: '80%', padding: '20px',  borderRadius: '0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginTop: '0px' }}>
         <Typography variant="h4" style={{ marginBottom: '20px' }}>2023-24 Roster</Typography>
         {rosterData.map((rower) => (
           <Card key={rower.id} style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
@@ -75,14 +82,22 @@ const Roster = () => {
               alt={rower.name}
             //   height="140"
               image={rower.photo}
-              style={{ width: '5%', objectFit: 'cover' }}
+              style={{ width: '7%', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
             />
-            <CardContent style={{ marginLeft: '20px' }}>
-              <Typography variant="h6">{rower.name}</Typography>
-              <Typography variant="body2" color="textSecondary">{rower.year}</Typography>
-              <Typography variant="body2" color="textSecondary">{rower.major}</Typography>
-              {/* Add more information as needed */}
+            {/* <CardContent style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}> */}
+            <CardContent style={{alignItems: 'center' }}>
+              <Typography variant="h6" style={{ fontWeight: 'bold', color: 'grey' }}>{rower.name}</Typography>
+              {/* <CardContent style={{ display: 'flex', flexDirection: 'column', alignSelf: 'flex-end' }}>
+                <Typography variant="body2" color="textSecondary">{rower.year}</Typography>
+              </CardContent> */}
             </CardContent>
+            <CardContent style={{ marginLeft: 'auto', marginRight: '20px', alignItems: 'center' }}>
+                <Typography variant="body4" color="black">{rower.year} / {rower.major} / {rower.hometown} / {rower.highschool}</Typography>
+                
+            </CardContent>
+            
+            
+
           </Card>
         ))}
       </Container>
