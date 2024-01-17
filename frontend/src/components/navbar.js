@@ -21,7 +21,7 @@ import {Link} from 'react-router-dom';
 
 const theme = createTheme({
     typography: {
-        fontFamily: "'Lato', sans-serif"
+        fontFamily: '"source-sans-pro", sans-serif'
     }
 });
 const drawerWidth = 240;
