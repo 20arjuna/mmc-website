@@ -7,6 +7,25 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        maxWidthSm: {
+          maxWidth: 200,
+        },
+        maxWidthMd: {
+          maxWidth: 600,
+        },
+        maxWidthLg: {
+          maxWidth: 500,
+        },
+      },
+    },
+  },
+});
 
 const Roster = () => {
   const rosterData = [
@@ -23,20 +42,35 @@ const Roster = () => {
     { id: 11, name: 'Anthony van Rheenan', year: 'Freshman', major: 'Computer Science', hometown: 'Vienna, Va.', highschool: 'Thomas Jefferson', height: "6'2\"", position: "Port", photo: john },
   ];
 
+  
+  // const ResponsiveContainer = styled(Container)(({ theme }) => ({
+  //   background: 'white',
+  //   width: '80%',
+  //   marginTop: '90px',
+  //   marginBottom: '30px',
+  //   borderRadius: '0',
+  //   boxShadow: '0 0px 0px rgba(0, 0, 0, 0.1)',
+  //   [theme.breakpoints.down('sm')]: {
+  //     maxWidth: 'lg',
+  //   },
+  // }));
+  
+
   const numRowers = rosterData.length;
   const greyBackground = 'f0f0f0'
   return (
+    <ThemeProvider theme={theme}>
     <div style={{ background: 'white', minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
       <Container 
         style={{ 
-        background: 'white', 
-        // width: '80%', 
+        background: 'white',  
         marginTop: '90px',
         marginBottom: '30px', 
         borderRadius: '0', 
         boxShadow: '0 0px 0px rgba(0, 0, 0, 0.1)' }}
-        maxWidth="80%"
+        maxWidth="md"
       >
+      {/* <ResponsiveContainer> */}
         <Typography variant="h6" style={{ 
           color: '#2c2a29',  
           marginBottom: '10px', 
@@ -84,7 +118,18 @@ const Roster = () => {
           </Card>
         ))}
       </Container>
+
+      {/* Media query for smaller screens */}
+      <style jsx>{`
+        @media (max-width: 600px) {
+          .MuiContainer-root {
+            max-width: 100% !important;
+          }
+        }
+      `}</style>
+      
     </div>
+    </ThemeProvider>
   );
 };
 
