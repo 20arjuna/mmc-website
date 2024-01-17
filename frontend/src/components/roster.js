@@ -76,28 +76,31 @@ const Roster = () => {
       <Container style={{ background: 'white', width: '80%', marginTop: '90px', marginBottom: '30px', borderRadius: '0', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
         <Typography variant="h4" style={{ marginBottom: '20px' }}>2023-24 Roster</Typography>
         {rosterData.map((rower) => (
-          <Card key={rower.id} style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-            <CardMedia
-              component="img"
-              alt={rower.name}
-            //   height="140"
-              image={rower.photo}
-              style={{ width: '7%', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
-            />
-            {/* <CardContent style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}> */}
-            <CardContent style={{alignItems: 'center' }}>
-              <Typography variant="h6" style={{ fontWeight: 'bold', color: 'grey' }}>{rower.name}</Typography>
-              {/* <CardContent style={{ display: 'flex', flexDirection: 'column', alignSelf: 'flex-end' }}>
-                <Typography variant="body2" color="textSecondary">{rower.year}</Typography>
-              </CardContent> */}
-            </CardContent>
-            <CardContent style={{ marginLeft: 'auto', marginRight: '20px', alignItems: 'center' }}>
-                <Typography variant="body4" color="black">{rower.year} / {rower.major} / {rower.hometown} / {rower.highschool}</Typography>
-                
-            </CardContent>
+          <Card key={rower.id} 
+            style={{ background: rower.id % 2 === 0 ? '#f0f0f0' : 'white', 
+            marginBottom: '20px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            boxShadow: '0 0px 5px rgba(0, 0, 0, 0.1)' }}>
+              <CardMedia
+                component="img"
+                alt={rower.name}
+              //   height="140"
+                image={rower.photo}
+                style={{ width: '7%', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
+              />
+              {/* <CardContent style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}> */}
+              <CardContent style={{alignItems: 'center' }}>
+                <Typography variant="h6" style={{ fontWeight: 'bold', color: 'grey' }}>{rower.name}</Typography>
+                {/* <CardContent style={{ display: 'flex', flexDirection: 'column', alignSelf: 'flex-end' }}>
+                  <Typography variant="body2" color="textSecondary">{rower.year}</Typography>
+                </CardContent> */}
+              </CardContent>
+              <CardContent style={{ marginLeft: 'auto', marginRight: '20px', alignItems: 'center' }}>
+                  <Typography variant="body4" color="black">{rower.year} / {rower.major} / {rower.hometown} / {rower.highschool}</Typography>
+                  
+              </CardContent>
             
-            
-
           </Card>
         ))}
       </Container>
