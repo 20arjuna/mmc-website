@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
 
 const theme = createTheme({
   components: {
@@ -117,20 +118,13 @@ const Roster = () => {
             
           </Card>
         ))}
+        <Divider></Divider>
       </Container>
-
-      {/* Media query for smaller screens */}
-      <style jsx>{`
-        @media (max-width: 600px) {
-          .MuiContainer-root {
-            max-width: 100% !important;
-          }
-        }
-      `}</style>
       
     </div>
     </ThemeProvider>
   );
 };
+
 
 export default Roster;
