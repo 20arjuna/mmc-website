@@ -49,7 +49,7 @@ const Schedule = () => {
   const isXsScreen = useMediaQuery('(max-width:600px)');
 
   return (
-    <div style={{ background: greyBackground, minHeight: '100vh', display: 'flex' }}>
+    <div style={{ background: greyBackground, minHeight: '80vh', display: 'flex' }}>
       <Container 
         style={{ 
         background: 'white',  

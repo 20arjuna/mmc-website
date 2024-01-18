@@ -9,6 +9,8 @@ import Recruiting from './components/recruiting';
 import Schedule from './components/schedule';
 import Faq from './components/faq';
 import Roster from './components/roster';
+import Footer from './components/footer';
+
 import React, { Component } from 'react';
 
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="faq" element={<Faq />} />
         <Route path="roster" element={<Roster />} />
       </Routes>
+      <Footer/>
     </div>
    
     // <div className="App">

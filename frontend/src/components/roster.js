@@ -70,7 +70,7 @@ const Roster = () => {
         style={{ 
         background: 'white',  
         marginTop: '90px',
-        marginBottom: '30px', 
+        marginBottom: '50px', 
         borderRadius: '0', 
         boxShadow: '0 0px 0px rgba(0, 0, 0, 0.1)' }}
         maxWidth="md"
