@@ -9,6 +9,8 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 const theme = createTheme({
   components: {
@@ -59,6 +61,8 @@ const Roster = () => {
 
   const numRowers = rosterData.length;
   const greyBackground = 'f0f0f0'
+  const isXsScreen = useMediaQuery('(max-width:600px)');
+
   return (
     <ThemeProvider theme={theme}>
     <div style={{ background: 'white', minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
@@ -75,7 +79,7 @@ const Roster = () => {
         <Typography variant="h6" style={{ 
           color: '#2c2a29',  
           marginBottom: '10px', 
-          marginTop: '20px',
+          marginTop: '10px',
           fontFamily: '"source-sans-pro", sans-serif',
           fontWeight: '700',
           }}
@@ -94,27 +98,43 @@ const Roster = () => {
                 alt={rower.name}
               //   height="140"
                 image={rower.photo}
-                style={{ width: '7%', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
+                style={{ width: '60px', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
               />
-              {/* <CardContent style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}> */}
-              <CardContent style={{alignItems: 'center' }}>
-                <Typography variant="body2" style={{ fontSize: '12px', color: '#333', fontFamily: '"source-sans-pro", sans-serif' }}>
-                  {rower.position}
-                </Typography>
-                <Typography variant="body1" style={{ fontSize: '18px',color: '#666666', fontWeight: '700', fontFamily: '"source-sans-pro", sans-serif' }}>
-                  {rower.name}
-                </Typography>
-              </CardContent>
-              <CardContent style={{  marginLeft: 'auto', marginRight: '0px', alignItems: 'center' }}>
-                  {/* <Typography variant="body1" style={{fontFamily: '"source-sans-pro", sans-serif', fontSize: '12px', fontWeight: '700', color: '#2c2a29', fontStyle: 'italic', width: '60px'}}>{rower.year}&nbsp;</Typography>
-                  <Typography variant="body1" style={{fontFamily: '"source-sans-pro", sans-serif', fontSize: '12px', fontWeight: '400', color: '#2c2a29', width: '375px'}}> / {rower.major} / {rower.hometown} / {rower.highschool}</Typography> */}
-                  <Typography>&nbsp;&nbsp;</Typography>
-                  <Typography variant="body1" style={{ fontFamily: '"source-sans-pro", sans-serif', fontSize: '12px', color: '#2c2a29', width: '450px' }}>
+
+              
+
+
+              {isXsScreen ? (
+                <CardContent style={{alignItems: 'center' }}>
+                  <Typography variant="body2" style={{ fontSize: '12px', color: '#333', fontFamily: '"source-sans-pro", sans-serif' }}>
+                    {rower.position}
+                  </Typography>
+                  <Typography variant="body1" style={{ fontSize: '18px',color: '#666666', fontWeight: '700', fontFamily: '"source-sans-pro", sans-serif' }}>
+                    {rower.name}
+                  </Typography>
+                  <Typography variant="body1" style={{ fontFamily: '"source-sans-pro", sans-serif', fontSize: '12px', color: '#2c2a29', width: '100%' }}>
                     <span style={{ fontWeight: '700', fontStyle: 'italic' }}>{rower.year}&nbsp;</span>
                     / {rower.major} / {rower.hometown} / {rower.highschool}
                   </Typography>
-                  
-              </CardContent>
+                </CardContent>
+              ) : (
+                <><CardContent style={{}}>
+                  <Typography variant="body2" style={{ fontSize: '12px', color: '#333', fontFamily: '"source-sans-pro", sans-serif' }}>
+                    {rower.position}
+                  </Typography>
+                  <Typography variant="body1" style={{ fontSize: '18px', color: '#666666', fontWeight: '700', fontFamily: '"source-sans-pro", sans-serif' }}>
+                    {rower.name}
+                  </Typography>
+                </CardContent>
+                <CardContent style={{ marginLeft: 'auto', marginRight: '0px', alignItems: 'center' }}>
+                  <Typography>&nbsp;&nbsp;</Typography>
+                  <Typography variant="body1" style={{ fontFamily: '"source-sans-pro", sans-serif', fontSize: '12px', color: '#2c2a29', width: '450px' }}>
+                    <span style={{ fontWeight: '700', fontStyle: 'italic' }}>{rower.year}&nbsp;</span>
+                    /  {rower.major} / {rower.hometown} / {rower.highschool}
+                  </Typography>
+                </CardContent></>
+                
+              )}
             
           </Card>
         ))}
