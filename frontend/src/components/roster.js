@@ -60,12 +60,12 @@ const Roster = () => {
   
 
   const numRowers = rosterData.length;
-  const greyBackground = 'f0f0f0'
+  const greyBackground = '#f0f0f0'
   const isXsScreen = useMediaQuery('(max-width:600px)');
 
   return (
     <ThemeProvider theme={theme}>
-    <div style={{ background: 'white', minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
+    <div style={{ background: greyBackground, minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
       <Container 
         style={{ 
         background: 'white',  

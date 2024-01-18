@@ -22,10 +22,10 @@ import {Link} from 'react-router-dom';
 const theme = createTheme({
     typography: {
         fontFamily: '"source-sans-pro", sans-serif'
-    }
+    },
 });
 const drawerWidth = 240;
-const navItems = ['Roster', 'Schedule', 'Recruiting', 'Contact', 'FAQ', 'Donate'];
+const navItems = ['Roster', 'Schedule', 'Recruiting', 'FAQ', 'Donate'];
 
 function NavBar(props) {
   const { window } = props;
@@ -72,6 +72,7 @@ function NavBar(props) {
         <AppBar component="nav" sx={{backgroundColor: '#de1d26'}}>
             <Toolbar>
             <IconButton
+                disableRipple
                 color="inherit"
                 aria-label="open drawer"
                 edge="start"
@@ -80,11 +81,14 @@ function NavBar(props) {
             >
                 <MenuIcon />
             </IconButton>
-            <img
-                src={menscrew}
-                alt="Adb Logo"
-                style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, height: '48px' }}
-            />
+            
+            <Link to="/">
+                <img
+                    src={menscrew}
+                    alt="Adb Logo"
+                    style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, height: '48px' }}
+                />
+            </Link>
             
             <Typography
                 variant="h5"
@@ -100,7 +104,7 @@ function NavBar(props) {
             </Typography>
             <Box sx={{display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                <Button key={item} sx={{ 
+                <Button disableRipple key={item} sx={{ 
                         fontWeight: 'bold', 
                         textTransform: 'none',
                         color: '#fff' }}>

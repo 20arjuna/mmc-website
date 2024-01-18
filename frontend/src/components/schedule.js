@@ -45,11 +45,11 @@ const Schedule = () => {
   
 
   const numRaces = scheduleData.length;
-  const greyBackground = 'f0f0f0'
+  const greyBackground = '#f0f0f0'
   const isXsScreen = useMediaQuery('(max-width:600px)');
 
   return (
-    <div style={{ background: 'white', minHeight: '100vh', display: 'flex' }}>
+    <div style={{ background: greyBackground, minHeight: '100vh', display: 'flex' }}>
       <Container 
         style={{ 
         background: 'white',  
