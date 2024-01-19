@@ -40,11 +40,13 @@ function NavBar(props) {
             {/* <Typography variant="h6" sx={{ my: 2}}>
             Mui
             </Typography> */}
-            <img
-                src={marylandImage}
-                alt="Adb Logo"
-                style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, marginTop: 15, height: '48px' }}
-            />
+            <Link to='/'>
+                <img
+                    src={marylandImage}
+                    alt="Adb Logo"
+                    style={{ display: { xs: 'none', md: 'flex' }, marginRight: 20, marginTop: 15, height: '48px' }}
+                />
+            </Link>
             <Divider />
             <List>
             {navItems.map((item) => (
