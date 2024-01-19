@@ -10,6 +10,7 @@ import FAQItem from "./faq_item";
 import faqData from '../static/faq_text.txt';
 import faqImage from '../images/oldheads.jpg'
 import ReactMarkdown from 'react-markdown';
+import Link from '@mui/material/Link';
 
 
 
@@ -73,6 +74,10 @@ const Faq = () => {
                         margin: '20px auto',
                     }}
                 />
+
+                <Typography variant="body1" sx={{ fontSize: '14px', textAlign: 'center' }}>
+                    Send us an <Link underline="hover" color="#2c2a29" href="mailto:crew.umd@gmail.com" sx={{textDecoration:'underline'}}>email</Link> if you have any additional questions
+                </Typography>
 
                 {faqs.map((faq, index) => (
                     <div key={index} style={{ marginBottom: index === faqs.length - 1 ? '20px' : 0, marginTop: index === 0 ? '20px' : 0 }}>
