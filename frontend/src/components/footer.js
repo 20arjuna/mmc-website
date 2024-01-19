@@ -6,8 +6,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {Link} from 'react-router-dom';
+import recwell from '../images/recwell.png';
+
+
+import marylandlogo from '../images/Maryland_logo.png';
 
 
 const theme = createTheme({
@@ -25,9 +29,15 @@ const Footer = () => {
     <ThemeProvider theme={theme}>
     <div style={{ background: greyBackground, minHeight: '20vh'}}>
       <Container maxWidth="md" sx={{ background: greyBackground, textAlign: 'center', marginTop: '0px', marginBottom: '0px', padding:'20px' }}>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Box
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            justifyContent={{ xs: 'center', md: 'space-between' }}
+            alignItems={{ xs: 'center', md: 'center' }}
+            gap={2} // Adjust this value for spacing
+        >
           {/* Left Section */}
-          <div>
+          <div  sx= {{marginBottom: { xs: '100px', md: '0' } }}>
             <Typography variant="body1" sx={{ fontSize: '14px', color: '#2c2a29', fontWeight: 'bold' }}>
                 Contact Us:
             </Typography>
@@ -44,23 +54,33 @@ const Footer = () => {
           </div>
   
           {/* Middle Section (Donate) */}
-          {/* <img src={longMaryland} alt="Your Image" style={{ height: '75px', width: 'auto' }} /> */}
           <Button
             disableRipple
             variant="contained"
             sx={{
                 backgroundColor: marylandRed,
+                borderRadius: '50px',
                 fontSize: '1.5rem',
                 padding: '16px 24px',
                 width: '200px',
                 textTransform: 'none',
                 '&:hover': {
-                backgroundColor: marylandRed, // You can set it to the same color to disable the default hover effect
+                backgroundColor: marylandRed, 
+                marginBottom: { xs: '30px', md: '0' }// You can set it to the same color to disable the default hover effect
                 },
             }}
           >
             Donate
           </Button>
+        
+          <a
+            href="https://recwell.umd.edu/programs-activities/club-sports"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ textDecoration: 'none', boxShadow: 'none', marginBottom: { xs: '30px', md: '0' } }}
+            >
+                <img src={recwell} alt="Your Image" style={{ height: '55px', width: 'auto' }} />
+        </a>
   
           {/* Right Section (instagram) */}
         <div>
@@ -68,7 +88,7 @@ const Footer = () => {
                 href="https://www.instagram.com/marylandrowing/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', boxShadow: 'none' }}
+                sx={{ textDecoration: 'none', boxShadow: 'none', marginBottom: { xs: '30px', md: '0' } }}
             >
                 <img src={instagram} alt="Your Image" style={{ height: '75px', width: 'auto' }} />
             </a>
