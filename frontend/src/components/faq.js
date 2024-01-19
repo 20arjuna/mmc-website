@@ -1,4 +1,4 @@
-// Schedule.js
+// faq.js
 import React, { useEffect, useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -6,12 +6,36 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { Link } from "react-router-dom";
+import FAQItem from "./faq_item";
+import faqData from '../static/faq_text.txt';
+import faqImage from '../images/oldheads.jpg'
+import ReactMarkdown from 'react-markdown';
+
+
+
 
 const Faq = () => {
 
     const greyBackground = '#f0f0f0'
+    const [faqs, setFaqs] = useState([]);
+
+    useEffect(() => {
+        const fetchFAQs = async () => {
+        try {
+            const response = await fetch(faqData); // Adjust the path accordingly
+            const faqsText = await response.text();
+            const faqsArray = faqsText.split('\n\n').map(entry => {
+            const [question, answer] = entry.split('\n');
+            return { question, answer };
+            });
+            setFaqs(faqsArray);
+        } catch (error) {
+            console.error('Error fetching FAQs:', error);
+        }
+        };
+
+        fetchFAQs();
+    }, []);
 
     return (
         <div style={{ background: greyBackground, minHeight: '80vh', display: 'flex' }}>
@@ -36,7 +60,25 @@ const Faq = () => {
                     Frequently Asked Questions
                 </Typography>
         
-        <Divider></Divider>
+                <Divider></Divider>
+
+                <img
+                    src={faqImage}
+                    alt="FAQ Image"
+                    style={{
+                        width: '80%',
+                        height: '350px',
+                        objectFit: 'cover',
+                        display: 'block',
+                        margin: '20px auto',
+                    }}
+                />
+
+                {faqs.map((faq, index) => (
+                    <div key={index} style={{ marginBottom: index === faqs.length - 1 ? '20px' : 0, marginTop: index === 0 ? '20px' : 0 }}>
+                        <FAQItem {...faq} />
+                    </div>
+                ))}
 
 
             </Container>
