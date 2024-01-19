@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {Link} from 'react-router-dom';
+import Link from '@mui/material/Link';
 import recwell from '../images/recwell.png';
 
 
@@ -37,12 +37,11 @@ const Footer = () => {
             <Typography variant="body1" sx={{ fontSize: '14px', color: '#2c2a29', fontWeight: 'bold' }}>
                 Contact Us:
             </Typography>
-            <Typography>
+            <Typography sx={{color: '#2c2a29'}}>
                 <Link
-                    underline="hover"
-                    color="#2c2a29"
+                    underline="always"
                     href={`mailto:${email}`}
-                    sx={{ fontSize: '14px' }}
+                    sx={{ fontSize: '14px', color: '#2c2a29' }}
                 >
                     {email}
                 </Link>
