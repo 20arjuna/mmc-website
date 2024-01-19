@@ -10,13 +10,29 @@ import Schedule from './components/schedule';
 import Faq from './components/faq';
 import Roster from './components/roster';
 import Footer from './components/footer';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { Component } from 'react';
 
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 950,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+  typography: {
+    fontFamily: '"source-sans-pro", sans-serif'
+  },
+  
+});
 
 function App() {
   return (
     
+    <ThemeProvider theme={theme}>
     <div>
       <NavBar/>
       <Routes>
@@ -30,6 +46,7 @@ function App() {
       </Routes>
       <Footer/>
     </div>
+    </ThemeProvider>
    
     // <div className="App">
     //   <header className="App-header">

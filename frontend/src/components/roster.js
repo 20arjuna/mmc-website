@@ -12,23 +12,7 @@ import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 
-const theme = createTheme({
-  components: {
-    MuiContainer: {
-      styleOverrides: {
-        maxWidthSm: {
-          maxWidth: 200,
-        },
-        maxWidthMd: {
-          maxWidth: 600,
-        },
-        maxWidthLg: {
-          maxWidth: 500,
-        },
-      },
-    },
-  },
-});
+
 
 const Roster = () => {
   const rosterData = [
@@ -64,7 +48,7 @@ const Roster = () => {
   const isXsScreen = useMediaQuery('(max-width:600px)');
 
   return (
-    <ThemeProvider theme={theme}>
+    //<ThemeProvider theme={theme}>
     <div style={{ background: greyBackground, minHeight: '100vh', display: 'flex',  alignItems: 'center' }}>
       <Container 
         style={{ 
@@ -142,7 +126,7 @@ const Roster = () => {
       </Container>
       
     </div>
-    </ThemeProvider>
+    //</ThemeProvider>
   );
 };
 

@@ -14,11 +14,7 @@ import recwell from '../images/recwell.png';
 import marylandlogo from '../images/Maryland_logo.png';
 
 
-const theme = createTheme({
-    typography: {
-        fontFamily: '"source-sans-pro", sans-serif'
-    },
-});
+
 
 const Footer = () => {
     const greyBackground = '#f0f0f0';
@@ -26,7 +22,7 @@ const Footer = () => {
     const marylandRed = '#de1d26';
   
     return (
-    <ThemeProvider theme={theme}>
+    //<ThemeProvider theme={theme}>
     <div style={{ background: greyBackground, minHeight: '20vh'}}>
       <Container maxWidth="md" sx={{ background: greyBackground, textAlign: 'center', marginTop: '0px', marginBottom: '0px', padding:'20px' }}>
         <Box
@@ -96,7 +92,7 @@ const Footer = () => {
         </Box>
       </Container>
     </div>
-    </ThemeProvider>
+    //</ThemeProvider>
     );
   };
   
