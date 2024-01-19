@@ -11,11 +11,23 @@ import faqData from '../static/faq_text.txt';
 import faqImage from '../images/oldheads.jpg'
 import ReactMarkdown from 'react-markdown';
 import Link from '@mui/material/Link';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 const Faq = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
+    const handleNavigation = (route) => {
+      navigate(route);
+      window.scrollTo(0, 0);
+    };
 
     const greyBackground = '#f0f0f0'
     const [faqs, setFaqs] = useState([]);

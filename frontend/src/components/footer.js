@@ -9,6 +9,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import recwell from '../images/recwell.png';
+import { Link as RouterLink } from 'react-router-dom';
+
 
 
 import marylandlogo from '../images/Maryland_logo.png';
@@ -49,24 +51,26 @@ const Footer = () => {
           </div>
   
           {/* Middle Section (Donate) */}
-          <Button
-            disableRipple
-            variant="contained"
-            sx={{
-                backgroundColor: marylandRed,
-                borderRadius: '50px',
-                fontSize: '1.5rem',
-                padding: '16px 24px',
-                width: '200px',
-                textTransform: 'none',
-                '&:hover': {
-                backgroundColor: marylandRed, 
-                marginBottom: { xs: '30px', md: '0' }// You can set it to the same color to disable the default hover effect
-                },
-            }}
-          >
-            Donate
-          </Button>
+          <Link component={RouterLink} to="/donate">
+            <Button
+              disableRipple
+              variant="contained"
+              sx={{
+                  backgroundColor: marylandRed,
+                  borderRadius: '50px',
+                  fontSize: '1.5rem',
+                  padding: '16px 24px',
+                  width: '200px',
+                  textTransform: 'none',
+                  '&:hover': {
+                  backgroundColor: marylandRed, 
+                  marginBottom: { xs: '30px', md: '0' }// You can set it to the same color to disable the default hover effect
+                  },
+              }}
+            >
+              Donate
+            </Button>
+          </Link>
         
           <a
             href="https://recwell.umd.edu/programs-activities/club-sports"

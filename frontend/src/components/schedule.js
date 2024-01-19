@@ -8,13 +8,26 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 
 //images
 import ergsprints from '../images/ErgSprints.jpg';
 
 
 const Schedule = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleNavigation = (route) => {
+    navigate(route);
+    window.scrollTo(0, 0);
+  };
+
+
   const scheduleData = [
     { id: 1, name: 'Alexandria Erg Sprints', date: 'Feb 3 (Sun)', location: 'Alexandria, Va.', link: 'https://www.ergsprints.com/event-details', photo: ergsprints },
     // { id: 2, name: 'Graham Elmore', year: 'Sophomore', major: 'Mechanical Engineering', hometown: 'Annapolis, Md.', highschool: 'Broadneck', height: "6'0\"", position: "Port", photo: john },
