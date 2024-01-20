@@ -128,7 +128,9 @@ const Home = () => {
               >
                 We row out of{" "}
                 <Link
-                  href="https://www.google.com/maps/dir/University+of+Maryland,+College+Park,+MD/Bladensburg+Waterfront+Park,+Annapolis+Road,+Bladensburg,+MD/@38.9623552,-76.9557746,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89b7c6bd3e9aaaab:0xd48e8bdda5e4da9a!2m2!1d-76.9425543!2d38.9869183!1m5!1m1!1s0x89b7c74066dda7b3:0xb4ed947ae86da71d!2m2!1d-76.939375!2d38.9377957!3e0?entry=ttu"
+                  href="https://www.google.com/maps/dir/College+Park,+MD/Bladensburg+Waterfront+Park,+Annapolis+Road,+Bladensburg,+MD/@38.963739,-76.9697506,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89b7c41e0d714699:0xeb8c0de36dd36d95!2m2!1d-76.93776!2d38.9896967!1m5!1m1!1s0x89b7c74066dda7b3:0xb4ed947ae86da71d!2m2!1d-76.939375!2d38.9377957!3e0?entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Bladensburg Waterfront Park,
                 </Link>{" "}
@@ -236,7 +238,7 @@ const Home = () => {
               src={funteam}
               alt="fun Team"
               style={{
-                width: "auto",
+                width: "400px",
                 height: "300px",
                 objectFit: "cover",
                 display: "block",

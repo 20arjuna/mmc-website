@@ -65,18 +65,18 @@ const Recruiting = () => {
           </Typography>
 
 
-          <div style={{ width: '80%', margin: '20px auto', height: '350px', overflow: 'hidden' }}>
             <img
               src={recruitingImage}
               alt="recruiting Image"
               style={{
-                width: '100%',
-                height: 'auto',
+                width: '80%',
+                height: '350px',
                 objectFit: 'cover',
                 display: 'block',
+                margin: '20px auto',
+
               }}
             />
-          </div>
 
           <Typography variant="h5" sx={{textAlign: 'center' }}>
             <Link underline="always" target='_blank' rel="noopener noreferrer" href="https://forms.gle/2KKR2MNw8kdgJ6Za9" sx={{color: '#de1d26'}}>RECRUITMENT FORM</Link>
