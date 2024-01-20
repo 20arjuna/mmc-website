@@ -107,7 +107,7 @@ const Home = () => {
                   Our Boathouse
                 </Typography>
                 <Typography variant="body1" style={{textAlign: 'center', margin: '20px 0', maxWidth: '400px' }}>
-                  We row out of Bladensburg Waterfront Park, located on the Anacostia River in Bladensburg, Maryland. The park is around a 15 min drive from campus.
+                  We row out of <Link href="https://www.google.com/maps/dir/University+of+Maryland,+College+Park,+MD/Bladensburg+Waterfront+Park,+Annapolis+Road,+Bladensburg,+MD/@38.9623552,-76.9557746,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89b7c6bd3e9aaaab:0xd48e8bdda5e4da9a!2m2!1d-76.9425543!2d38.9869183!1m5!1m1!1s0x89b7c74066dda7b3:0xb4ed947ae86da71d!2m2!1d-76.939375!2d38.9377957!3e0?entry=ttu">Bladensburg Waterfront Park,</Link> located on the Anacostia River in Bladensburg, Maryland. The park is around a 15 min drive from campus.
                 </Typography>
               </div>
               <img
@@ -162,7 +162,7 @@ const Home = () => {
                   Regattas
                 </Typography>
                 <Typography variant="body1" style={{textAlign: 'center', margin: '20px 0', maxWidth: '400px' }}>
-                  Each season, the team competes at several regattas. They are perfect opportunities to show off our hard work and have fun as a team.
+                  Each season, the team competes at several regattas. They are perfect opportunities for us to show off our hard work while representing UMD. Check out our schedule for the season <Link component={RouterLink} to="/schedule">here</Link>.
                 </Typography>
               </div>
               <img
@@ -201,7 +201,7 @@ const Home = () => {
                     Social
                   </Typography>
                 <Typography variant="body1" style={{ textAlign: 'center', margin: '20px 0', maxWidth: '400px' }}>
-                  When we are not training or competing, we spend plenty of time together as a team. In addition to hanging out around campus, we host social events with other clubs and a formal at the end of the year. 
+                  When we are not training or competing, we spend plenty of time together as a team. In addition to hanging out around campus, we host social events with other clubs, and a formal at the end of the year. 
                 </Typography>
               </div>
             </div>
