@@ -11,7 +11,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 //images
-import ergsprints from '../images/ErgSprints.jpg';
+// import ergsprints from '../images/ErgSprints.jpg';
+import ohio from '../images/ohio.jpg';
+import sju from '../images/sju.jpg';
+import schuykill from '../images/schuykill.jpg';
+import mason from '../images/mason.png';
+import frostbite from '../images/frostbite.jpg';
 
 
 const Schedule = () => {
@@ -29,7 +34,12 @@ const Schedule = () => {
 
 
   const scheduleData = [
-    { id: 1, name: 'Alexandria Erg Sprints', date: 'Feb 3 (Sun)', location: 'Alexandria, Va.', link: 'https://www.ergsprints.com/event-details', photo: ergsprints },
+    { id: 1, name: 'Head of the Ohio', date: 'Oct 5-6 (Sat/Sun)', location: 'Pittsburgh, Pa.', link: 'https://www.regattacentral.com/regatta/index.jsp?job_id=8769&org_id=0', photo: ohio },
+    { id: 2, name: 'Navy Day Regatta', date: 'Oct 13 (Sun)', location: 'Philadelphia, Pa.', link: 'https://www.thenavydayregatta.com/', photo: sju },
+    { id: 3, name: 'Head of the Schuylkill', date: 'Oct 26 (Sat)', location: 'Philadelphia, Pa.', link: 'https://hosr.org/', photo: schuykill },
+    { id: 4, name: 'Head of the Ocoquan', date: 'Nov 2 (Sat)', location: 'Fairfax Station, Va.', link: 'https://www.rowobc.org/regattas-camps/hoto', photo: mason },
+    { id: 5, name: 'Philadelphia Frostbite Regatta', date: 'Nov 10 (Sun)', location: 'West Windsor, NJ.', link: 'https://pennsylvaniabargeclub.org/philadelphia-frostbite-regatta/', photo: frostbite },
+
     // { id: 2, name: 'Graham Elmore', year: 'Sophomore', major: 'Mechanical Engineering', hometown: 'Annapolis, Md.', highschool: 'Broadneck', height: "6'0\"", position: "Port", photo: john },
     // { id: 3, name: 'Onur Gunduz', year: 'Sophomore', major: 'Computer Science', hometown: 'Fairfax, Va.', highschool: 'Thomas Jefferson', height: "5'11\"", position: "Port", photo: john },
     // { id: 4, name: 'Prabhat Jain', year: 'Freshman', major: 'Computer Science', hometown: 'Sykesville, Md.', highschool: 'Century', height: "5'9\"", position: "Starboard", photo: john },
@@ -89,12 +99,26 @@ const Schedule = () => {
             display: 'flex', 
             alignItems: 'center', 
             boxShadow: '0 0px 5px rgba(0, 0, 0, 0)' }}>
-              <CardMedia
+              {/* <CardMedia
                 component="img"
                 alt={race.name}
               //   height="140"
                 image={race.photo}
                 style={{ width: '90px', objectFit: 'cover',  marginLeft: '20px', marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
+              /> */}
+              <CardMedia
+                component="img"
+                alt={race.name}
+                image={race.photo}
+                style={{
+                  width: '100px', // Fixed width for all logos
+                  height: '50px', // Fixed height for all logos
+                  objectFit: 'contain', // Ensures the image is scaled properly without being cropped
+                  marginLeft: '20px',
+                  marginTop: '20px',
+                  marginBottom: '20px',
+                  marginRight: '20px'
+                }}
               />
 
               

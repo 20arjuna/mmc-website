@@ -79,7 +79,7 @@ const Recruiting = () => {
             />
 
           <Typography variant="h5" sx={{textAlign: 'center' }}>
-            <Link underline="always" target='_blank' rel="noopener noreferrer" href="https://forms.gle/2KKR2MNw8kdgJ6Za9" sx={{color: '#de1d26'}}>RECRUITMENT FORM</Link>
+            <Link underline="always" target='_blank' rel="noopener noreferrer" href="https://bit.ly/MarylandRowing" sx={{color: '#de1d26'}}>RECRUITMENT FORM</Link>
           </Typography>
 
           <Typography variant="body1" sx={{ fontSize: '14px', marginTop: '20px', marginBottom: '20px' }}>

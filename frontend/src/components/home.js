@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import mainImage from "../images/mainpage.png";
-import fall24 from "../images/fall24.jpg";
+import fall24 from "../images/fall24.png";
 import Grid from "@mui/material/Grid";
 import joinTeam from "../images/fours.png";
 import boathouse from "../images/boathouse.jpg";
