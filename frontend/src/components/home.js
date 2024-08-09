@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import mainImage from "../images/mainpage.png";
+import fall24 from "../images/fall24.jpg";
 import Grid from "@mui/material/Grid";
 import joinTeam from "../images/fours.png";
 import boathouse from "../images/boathouse.jpg";
@@ -38,7 +39,7 @@ const Home = () => {
           }}
         >
           <img
-            src={mainImage}
+            src={fall24}
             alt="home Image"
             style={{
               width: "100%",
@@ -90,7 +91,7 @@ const Home = () => {
                   maxWidth: "400px",
                 }}
               >
-                We are actively recruiting for the Spring 2024 season. If you
+                We are actively recruiting for the Fall 2024 season. If you
                 are interested in joining the team, please visit our{" "}
                 <Link component={RouterLink} to="/recruiting">
                   recruitment page
@@ -116,7 +117,7 @@ const Home = () => {
                   fontWeight: "bold",
                 }}
               >
-                Our Boathouse
+                Where We Row
               </Typography>
               <Typography
                 variant="body1"
@@ -190,7 +191,7 @@ const Home = () => {
                   fontWeight: "bold",
                 }}
               >
-                The Erg Room
+                Indoor Training Facility
               </Typography>
               <Typography variant="body1" style={{ textAlign: 'center', margin: '20px 0', maxWidth: '400px' }}>
                   When we can't go out on the water, we train at the team's Erg Room in Cole Field House. Training on the erg allows us to put in work off the water and stay in shape during the winter months.
@@ -208,7 +209,7 @@ const Home = () => {
                 Regattas
               </Typography>
               <Typography variant="body1" style={{textAlign: 'center', margin: '20px 0', maxWidth: '400px' }}>
-                Each season, the team competes at several regattas. They are perfect opportunities for us to show off our hard work while representing UMD. Check out our schedule for the season <Link component={RouterLink} to="/schedule">here</Link>.
+                Each season, the team competes at several regattas. They are perfect opportunities for us to show off our hard work and represent the University. Check out our schedule for the season <Link component={RouterLink} to="/schedule">here</Link>.
               </Typography>
             </div>
           </Grid>
