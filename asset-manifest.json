@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/crew-umd.github.io/mmc-website/static/css/main.ed983e62.css",
-    "main.js": "/crew-umd.github.io/mmc-website/static/js/main.3b095ead.js",
+    "main.js": "/crew-umd.github.io/mmc-website/static/js/main.615c1d9f.js",
     "static/js/787.9e9f4ffd.chunk.js": "/crew-umd.github.io/mmc-website/static/js/787.9e9f4ffd.chunk.js",
     "static/media/fours.png": "/crew-umd.github.io/mmc-website/static/media/fours.b026d910ac82e58e487d.png",
     "static/media/funteam.JPG": "/crew-umd.github.io/mmc-website/static/media/funteam.199c8fb0b5d948f5ce96.JPG",
@@ -25,11 +25,11 @@
     "index.html": "/crew-umd.github.io/mmc-website/index.html",
     "static/media/faq_text.txt": "/crew-umd.github.io/mmc-website/static/media/faq_text.77cee875c3fc01d8c84c.txt",
     "main.ed983e62.css.map": "/crew-umd.github.io/mmc-website/static/css/main.ed983e62.css.map",
-    "main.3b095ead.js.map": "/crew-umd.github.io/mmc-website/static/js/main.3b095ead.js.map",
+    "main.615c1d9f.js.map": "/crew-umd.github.io/mmc-website/static/js/main.615c1d9f.js.map",
     "787.9e9f4ffd.chunk.js.map": "/crew-umd.github.io/mmc-website/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ed983e62.css",
-    "static/js/main.3b095ead.js"
+    "static/js/main.615c1d9f.js"
   ]
 }
